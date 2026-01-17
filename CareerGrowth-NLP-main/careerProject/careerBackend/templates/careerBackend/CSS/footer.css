@@ -1,0 +1,14 @@
+nav ol{
+
+    display: flex;
+    justify-content: center;
+    
+    }
+    nav ol li a{
+      text-decoration:none;
+      color:white;
+    }
+    
+    nav ol li a:hover{
+    color: brown;
+    }

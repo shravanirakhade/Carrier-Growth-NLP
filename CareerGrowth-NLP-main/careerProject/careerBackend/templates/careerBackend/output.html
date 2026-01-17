@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Counseling Result</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f6ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .result-container {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .result-container h2 {
+      color: #2d3e50;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .result-info {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .career-suggestion {
+      background: #e0f7fa;
+      padding: 20px;
+      border-left: 5px solid #00796b;
+      border-radius: 8px;
+      font-size: 18px;
+      color: #004d40;
+    }
+
+    .btn-back {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 20px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .btn-back:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-container">
+	<a href="Register.html" class="btn-submit">
+	  <h2>Your Career Counseling Result</h2>
+	</a>
+	<div class="career-suggestion">
+	  <strong>Suggested Career Path: {{ career_suggestion }}</strong>
+	  <strong>Suggested Job(s): {{ job_suggestion }}</strong>
+	  <div id="response">
+		<!-- {#  Response will be displayed here #}-->
+	  </div>
+	</div>
+	<a href="{% url 'home' %}" class="btn-back">Go Back</a>
+  </div>
+</body>
+</html>
